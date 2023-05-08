@@ -1,12 +1,56 @@
 package ru.netology.javaqa;
 
 public class Radio {
-    public int volumeLevel;
+    private int volumeLevel;
+    private int RadioStationNumber;
+
+    public void nextNewVolumeLevel() {
+        if (volumeLevel < 100) {
+            volumeLevel += 1;
+        } else {
+            volumeLevel = 100;
+        }
+    }
+
+    public void prevNewVolumeLevel() {
+        if (volumeLevel > 0) {
+            volumeLevel -= 1;
+        } else {
+            volumeLevel = 0;
+        }
+    }
+
+    public void lstVolumeLevel() {
+
+        volumeLevel = 100;
+    }
+
+    public void nextRadioStationNumber() {
+        if (RadioStationNumber < 9) {
+            RadioStationNumber += 1;
+        } else {
+            RadioStationNumber = 0;
+        }
+    }
+
+    public void prevRadioStationNumber() {
+        if (RadioStationNumber > 0) {
+            RadioStationNumber -= 1;
+        } else {
+            RadioStationNumber = 9;
+        }
+    }
+
+    public void lstRadioStation() {
+
+        RadioStationNumber = 9;
+    }
 
     public int getVolumeLevel() {
 
         return volumeLevel;
     }
+
     public void setVolumeLevel(int newVolumeLevel) {
         if (newVolumeLevel < 0) {
             return;
@@ -16,32 +60,13 @@ public class Radio {
         }
         volumeLevel = newVolumeLevel;
     }
-    public void nextNewVolumeLevel() {
-        if (volumeLevel < 100) {
-            volumeLevel += 1;
-        }
-        else  {
-            volumeLevel = 100;
-        }
-    }
-    public void prevNewVolumeLevel() {
-        if (volumeLevel > 0) {
-            volumeLevel -= 1;
-        }
-        else {
-            volumeLevel = 0;
-        }
-    }
-        public void lstVolumeLevel() {
 
-            volumeLevel = 100;
-        }
-    public int RadioStationNumber;
 
     public int getRadioStationNumber() {
 
         return RadioStationNumber;
     }
+
     public void setRadioStationNumber(int newRadioStationNumber) {
         if (newRadioStationNumber < 0) {
             return;
@@ -51,26 +76,7 @@ public class Radio {
         }
         RadioStationNumber = newRadioStationNumber;
     }
-    public void nextRadioStationNumber() {
-        if (RadioStationNumber < 9) {
-            RadioStationNumber += 1;
-        }
-        else  {
-            RadioStationNumber = 0;
-        }
-    }
-    public void prevRadioStationNumber() {
-        if (RadioStationNumber > 0) {
-            RadioStationNumber -= 1;
-        }
-        else {
-            RadioStationNumber = 9;
-        }
-    }
-    public void lstRadioStation() {
 
-        RadioStationNumber = 9;
-    }
 }
 
 
